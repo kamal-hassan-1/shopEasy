@@ -20,9 +20,16 @@ app.use(
 );
 
 async function startServer() {
-	const db = await connectDB();
-	app.use("/api/auth", auth(db));
-	app.use("/api/main", main(db));
-	app.listen(port);
+	try {
+		const db = await connectDB();
+		app.use("/api/auth", auth(db));
+		app.use("/api/main", main(db));
+		app.listen(port, () => {
+			console.log(`Server is running on port ${port}`);
+		});
+	} catch (error) {
+		console.error("Failed to start server:", error);
+		process.exit(1);
+	}
 }
 startServer();

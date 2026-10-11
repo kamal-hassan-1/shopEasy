@@ -1,0 +1,5 @@
+# Ignore third-party dependencies
+node_modules/
+
+# Ignore environment variables/secrets
+.env

@@ -1,4 +1,12 @@
 const { MongoClient } = require("mongodb");
+const dns = require("dns");
+
+// Configure public DNS servers to resolve MongoDB Atlas SRV records reliably on Windows
+try {
+	dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch (error) {
+	console.warn("Could not set custom DNS servers:", error.message);
+}
 
 let db;
 let client;

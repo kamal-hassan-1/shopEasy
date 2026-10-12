@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161f2e"/>
+      <stop offset="50%" stop-color="#0f1724"/>
+      <stop offset="100%" stop-color="#090d15"/>
+    </linearGradient>
+
+    <!-- Outer Border Glow Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Bag Main Gradient -->
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="45%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+
+    <!-- Bag Inner Top Sheen -->
+    <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Handle Gradient -->
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="50%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Star Glow Filter -->
+    <filter id="starGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Bag Drop Shadow Filter -->
+    <filter id="bagShadow" x="-20%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle / Rounded Tile -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#borderGrad)" stroke-width="6"/>
+
+  <!-- Bag Handles (Behind Bag) -->
+  <path d="M 194 195 V 138 C 194 92 318 92 318 138 V 195" 
+        fill="none" 
+        stroke="url(#handleGrad)" 
+        stroke-width="28" 
+        stroke-linecap="round"/>
+
+  <!-- Shopping Bag Body with Drop Shadow -->
+  <g filter="url(#bagShadow)">
+    <path d="M 132 185
+             C 126 185, 120 190, 122 198
+             L 142 418
+             C 144 430, 154 440, 166 440
+             L 346 440
+             C 358 440, 368 430, 370 418
+             L 390 198
+             C 392 190, 386 185, 380 185
+             Z"
+          fill="url(#bagGrad)"/>
+    
+    <!-- Sheen overlay -->
+    <path d="M 132 185
+             C 126 185, 120 190, 122 198
+             L 142 418
+             C 144 430, 154 440, 166 440
+             L 346 440
+             C 358 440, 368 430, 370 418
+             L 390 198
+             C 392 190, 386 185, 380 185
+             Z"
+          fill="url(#sheenGrad)"/>
+  </g>
+
+  <!-- Handle Mount Rivets/Anchors -->
+  <circle cx="194" cy="204" r="10" fill="#0284c7" stroke="#e0f2fe" stroke-width="4"/>
+  <circle cx="318" cy="204" r="10" fill="#0284c7" stroke="#e0f2fe" stroke-width="4"/>
+
+  <!-- Centered Bold "S" inside the bag -->
+  <path d="M 302 250
+           C 289 238, 272 234, 256 234
+           C 226 234, 208 249, 208 270
+           C 208 289, 224 298, 250 305
+           L 266 310
+           C 292 318, 312 331, 312 357
+           C 312 385, 286 404, 254 404
+           C 232 404, 214 397, 200 384" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="32" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <!-- Sparkle Star in Top-Right -->
+  <path d="M 395 105
+           Q 395 125, 415 125
+           Q 395 125, 395 145
+           Q 395 125, 375 125
+           Q 395 125, 395 105 Z" 
+        fill="#fde047" 
+        filter="url(#starGlow)"/>
+
+  <!-- Tiny Accent Sparkle -->
+  <path d="M 432 155
+           Q 432 165, 442 165
+           Q 432 165, 432 175
+           Q 432 165, 422 165
+           Q 432 165, 432 155 Z" 
+        fill="#ffffff" 
+        opacity="0.9"/>
+</svg>

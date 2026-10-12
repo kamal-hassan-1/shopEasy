@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shop Easy - Easy Shopping</title>
+		<link rel="stylesheet" href="homeStyle.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<nav>
+				<a href="#" class="logo">Shop Easy</a>
+				<ul class="nav-links">
+					<li><a href="#">Home</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li>
+						<a href="cart.html">
+							Cart <span class="cart-badge" id="cartBadge">0</span>
+						</a>
+					</li>
+					<li><a href="order.html">Order</a></li>
+					<li class="profile-dropdown">
+						<div class="profile-icon" onclick="toggleDropdown()">👤</div>
+						<div class="dropdown-menu" id="profileDropdown">
+							<a href="#register" onclick="handleRegister()">Register</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero" id="home">
+			<div class="hero-content">
+				<h1>Elevate Your Style</h1>
+				<p>
+					Discover premium lifestyle products curated for the modern individual.
+					Experience luxury that speaks to your unique taste.
+				</p>
+				<a href="shop.html" class="cta-button">Explore Collection</a>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title">Why Choose Shop Easy</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">🚚</div>
+						<h3>Free Shipping</h3>
+						<p>
+							Complimentary shipping on all orders over $100. Fast, reliable
+							delivery to your doorstep.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🔒</div>
+						<h3>Secure Payments</h3>
+						<p>
+							Your transactions are protected with bank-level security and
+							encryption technology.
+						</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🎯</div>
+						<h3>Premium Quality</h3>
+						<p>
+							Handpicked products from trusted brands, ensuring exceptional
+							quality and craftsmanship.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter Section -->
+		<section class="newsletter">
+			<div class="container">
+				<h2>Stay in Style</h2>
+				<p>
+					Subscribe to our newsletter for exclusive offers and style inspiration
+				</p>
+				<form class="newsletter-form">
+					<input type="email" placeholder="Enter your email address" required />
+					<button type="submit">Subscribe</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h3>Quick Links</h3>
+						<a href="#home">Home</a>
+						<a href="shop.html">Shop</a>
+						<a href="cart.html">Cart</a>
+						<a href="order.html">Order</a>
+					</div>
+
+					<div class="footer-section">
+						<h3>Follow Us</h3>
+						<a href="https://www.instagram.com/">Instagram</a>
+						<a href="https://www.facebook.com/">Facebook</a>
+						<a href="https://www.twitter.com/">Twitter</a>
+						<a href="https://www.Pinterest.com/">Pinterest</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>
+						&copy; 2025 Shop Easy. All rights reserved. | Crafted with precision
+						and style.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="config.js"></script>
+		<script src="homeScript.js"></script>
+		<script src="cartBadge.js"></script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart - Shop Easy Store</title>
+		<link rel="stylesheet" href="cartStyle.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<nav>
+				<a href="home.html" class="logo">Shop Easy</a>
+				<ul class="nav-links">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li>
+						<a href="cart.html" class="active">
+							Cart <span class="cart-badge" id="cartBadge">0</span>
+						</a>
+					</li>
+					<li><a href="order.html">Order</a></li>
+					<li class="profile-dropdown">
+						<div class="profile-icon" onclick="toggleDropdown()">👤</div>
+						<div class="dropdown-menu" id="profileDropdown">
+							<a href="#register" onclick="handleRegister()">Register</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<main>
+			<div class="container">
+				<!-- Page Header -->
+				<div class="page-header">
+					<h1 class="page-title">Shopping Cart</h1>
+					<p class="page-subtitle">Review your selected items</p>
+				</div>
+
+				<!-- Cart Content -->
+				<div id="cartContent">
+					<div class="cart-layout">
+						<!-- Cart Items -->
+						<div class="cart-items">
+							<div class="cart-header">
+								<h2 class="cart-title">Your Items</h2>
+								<button class="clear-cart" onclick="clearCart()">
+									Clear Cart
+								</button>
+							</div>
+
+							<div id="cartItemsList"></div>
+						</div>
+
+						<!-- Cart Summary -->
+						<div class="cart-summary">
+							<h3 class="summary-title">Order Summary</h3>
+
+							<div class="summary-row">
+								<span class="summary-label">Subtotal:</span>
+								<span class="summary-value" id="subtotal">$1,099.97</span>
+							</div>
+
+							<div class="summary-row">
+								<span class="summary-label">Shipping:</span>
+								<span class="summary-value" id="shipping">$0.00</span>
+							</div>
+
+							<div class="summary-row">
+								<span class="summary-label">Tax:</span>
+								<span class="summary-value" id="tax">$109.99</span>
+							</div>
+
+							<div class="summary-row" id="discountRow" style="display: none">
+								<span class="summary-label">Discount:</span>
+								<span class="summary-value" id="discount">-$0.00</span>
+							</div>
+
+							<div class="summary-row">
+								<span class="summary-label">Total:</span>
+								<span class="summary-value" id="total">$1,209.96</span>
+							</div>
+
+							<button class="checkout-btn" onclick="proceedToCheckout()">
+								Proceed to Checkout
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Empty Cart (hidden by default) -->
+				<div class="empty-cart" id="emptyCart" style="display: none">
+					<div class="empty-cart-icon">🛒</div>
+					<h3>Your cart is empty</h3>
+					<p>Looks like you haven't added any items to your cart yet.</p>
+					<a href="shop.html" class="continue-shopping">Continue Shopping</a>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script src="config.js"></script>
+	<script src="cartScript.js"></script>
+	<script src="cartBadge.js"></script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shop - Shop Easy Store</title>
+		<link rel="stylesheet" href="shopStyle.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<nav>
+				<a href="home.html" class="logo">Shop Easy</a>
+				<ul class="nav-links">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="shop.html" class="active">Shop</a></li>
+					<li>
+						<a href="cart.html">
+							Cart <span class="cart-badge" id="cartBadge">0</span>
+						</a>
+					</li>
+					<li><a href="order.html">Order</a></li>
+					<li class="profile-dropdown">
+						<div class="profile-icon" onclick="toggleDropdown()">👤</div>
+						<div class="dropdown-menu" id="profileDropdown">
+							<a href="#register" onclick="handleRegister()">Register</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<main>
+			<div class="container">
+				<!-- Page Header -->
+				<div class="page-header">
+					<h1 class="page-title">Shop Collection</h1>
+					<p class="page-subtitle">
+						Discover premium products curated for your lifestyle
+					</p>
+				</div>
+
+				<!-- Filters Section -->
+				<div class="filters">
+					<div class="filter-row">
+						<div class="filter-group search-bar">
+							<input
+								type="text"
+								id="searchInput"
+								placeholder="Search products..."
+							/>
+						</div>
+						<div class="filter-group">
+							<label for="categoryFilter">Category:</label>
+							<select id="categoryFilter">
+								<option value="">All</option>
+								<option value="accessories">Accessories</option>
+								<option value="electronics">Electronics</option>
+								<!-- Add more categories as needed -->
+							</select>
+						</div>
+						<div class="filter-group">
+							<label for="priceFilter">Max Price:</label>
+							<select id="priceFilter">
+								<option value="">No Limit</option>
+								<option value="100">100</option>
+								<option value="300">300</option>
+								<option value="500">500</option>
+							</select>
+						</div>
+						<div class="filter-group sort-options">
+							<label for="sortSelect">Sort By:</label>
+							<select id="sortSelect">
+								<option value="">Default</option>
+								<option value="price-low">Price: Low to High</option>
+								<option value="price-high">Price: High to Low</option>
+								<option value="name">Name</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Products Section -->
+				<div class="products-section">
+					<div class="products-header">
+						<div class="results-count">
+							Showing <span id="resultCount">0</span> products
+						</div>
+					</div>
+
+					<!-- Product Grid -->
+					<div class="product-grid" id="productGrid"></div>
+				</div>
+			</div>
+		</main>
+
+		<script src="config.js"></script>
+		<script src="shopScript.js"></script>
+		<script src="cartBadge.js"></script>
+	</body>
+</html>

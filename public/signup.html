@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shop Easy - Sign Up</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">Shop Easy</h1>
+
+			<div class="form-container">
+				<form class="auth-form" id="signupform">
+					<h2>Sign Up</h2>
+
+					<div class="error-message" id="errorMessage"></div>
+
+					<label for="name">Full Name</label>
+					<input type="text" id="name" placeholder="John Doe" required />
+
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						placeholder="you@example.com"
+						required
+					/>
+
+					<label for="password">Password</label>
+					<input
+						type="password"
+						id="password"
+						placeholder="Create a password"
+						required
+					/>
+
+					<button type="submit" id="signupbutton">Sign Up</button>
+					<p class="switch-text">
+						Already have an account? <a href="login.html">Log In</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="config.js"></script>
+	<script src="signupScript.js"></script>
+</html>
